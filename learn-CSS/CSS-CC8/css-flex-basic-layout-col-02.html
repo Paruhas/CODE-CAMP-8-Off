@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Basic Layout</title>
+  <style>
+    * { margin : 0}
+    body { 
+      max-width: 1200px;
+      margin: auto;
+    }
+    .container {
+      background: silver;
+      color: white;
+      display : flex;
+      flex-direction: column;
+      height : 99vh;
+      margin-bottom: 10px;
+    }
+    header {
+      background: red;
+      flex: 2;
+    }
+    main {
+      background: green;
+      flex: 8;
+      display : flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    main > * {
+      outline: 1px dashed salmon;
+      height : 100%;
+      flex : 1;
+    }
+    .main-c{
+       flex: 4; 
+      display: flex;
+      justify-content: center;
+    }
+    .main-c > * {
+      color: inherit;
+      /* text-align: center; */
+    }
+    footer {
+      background: blue;
+      flex: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>h</header>
+    <main>
+      <div class="main-l"></div>
+      <div class="main-c">
+        <h2>Title</h2>
+      </div>
+      <div class="main-r"></div>
+    </main>
+    <footer>f</footer>
+  </div>
+</body>
+</html>

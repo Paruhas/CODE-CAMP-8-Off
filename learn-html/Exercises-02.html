@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-02 : Form</title>
+</head>
+<body>
+    <h3><u>กรอกข้อมูลของนักเรียนลงด้านล่าง</u></h3>
+
+    <form action="">
+
+        <div>
+            <label for="firstname">ชื่อ</label>
+            <span>-</span>
+            <label for="lastname">นามสกุล :</label>
+            <input type="text" name="firstname" id="firstname">
+            <span>-</span>
+            <input type="text" name="lastname" id="lastname">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="age">อายุ :</label>
+            <input type="number" name="age" id="age">
+        </div>
+        
+        <br>
+
+        <div>
+            <label for="birthdate">วัน เดือน ปีเกิด :</label>
+            <input type="date" name="birthdate" id="birthdate" placeholder="dd-mm-yyyy" value="" max="2020-12-31">
+        </div>
+
+        <br>
+
+        <div> 
+            <label for="f-color">สีที่ชอบ :</label>
+            <input type="color" name="f-color" id="f-color">
+        </div>
+
+        <br>
+
+        <div>
+            <div>เพศ :</div>
+            <input type="radio" name="sex" id="sex-m">
+            <label for="sex-m">ชาย</label>
+            <input type="radio" name="sex" id="sex-f">
+            <label for="sex-f">หญิง</label>
+        </div>
+
+        <br>
+
+        <div>
+            <div>รูปประจำตัว :</div>
+            <input type="file" name="picture" id="picture">
+            <img src="" alt="">
+        </div>
+        
+        <br>
+
+        <div>
+            <label for="motto">คติประจำใจ :</label> <br>
+            <!-- <input type="textarea" name="motto" id="motto"> -->
+            <textarea name="motto" id="motto" cols="50" rows="2" placeholder=""></textarea>
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit" value="ตกลง">
+        </div>
+        
+
+    </form>
+</body>
+</html>
+
+
+<!-- ชื่อ, นามสกุล, อายุ, วัน เดือน ปีเกิด, สีที่ชอบ, เพศ, รูปประจำตัว, คติประจำใจ -->

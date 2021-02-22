@@ -1,0 +1,203 @@
+<a href="#promotion-section"><h6>TEST ID Jump(ส่วนของ Promotion บนหน้าเว็บ)</h6></a>
+
+<h1>Hello CodeCamp</h1>
+<h2>Hello CodeCamp</h2>
+<h3>Hello CodeCamp</h3>
+
+<p>TEST PARAGRAPH1</p>
+
+<p>TEST 
+    <span>test span</span> 
+PARAGRAPH2</p>
+
+<span>test span</span> <!-- span ไม่ขึ้นบรรทัดใหม่-->
+
+<div>text to url test <a href="https://www.google.com" target="_blank">link to google</a></div> <!-- target="_blank" เปิดlinkในtabใหม่-->
+
+<ul>
+    <li>Home</li>
+    <li>Product</li>
+    <li>Customer Support</li>
+    <li>About us</li>
+</ul>
+
+<ol>
+    <li>Home</li>
+    <li>Product</li>
+    <li>Customer Support</li>
+    <li>About us</li>
+</ol>
+
+<div>
+    <div>Post : Coding is good!</div>
+    <div>
+        This is content This is content
+        This is content This is content
+        This is content This is content
+        This is content This is content
+        This is content This is content
+    </div>
+    <p>Paragraph in "div"</p>
+</div>
+
+<button>LOG IN</button> <br> <br>
+
+<img src="https://www.google.co.th/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="GOOGLE img" /> <!-- alt ไว้สำหรับ pic to speech คนพิการได้-->
+
+<input type="text" name="" id=""> 
+<input type="password" name="" id="">
+<input type="number" name="" id="">
+<input type="date" name="" id="">
+<input type="datetime" name="" id="">
+<input type="datetime-local" name="" id="">
+
+<!--
+    input ไว้รับข้อมูลจาก user มีหลาย type
+    text เป็นข้อความปกติ
+    password ทำให้***เวลากรอก
+    number ใส่ข้อมูลเป็นตัวเลขเท่านั้น (กับตัว e และ .)
+    datetime-local date เอาแค่ วดป time-local เอาเวลาด้วย
+-->
+
+<form action="">
+    <input type="text" name="" id="">
+    <input type="password" name="" id="">
+    <input type="text" name="" id="">
+</form>
+
+<!--
+    ทาให็น tag form รับ input แล้วส่งข้อมูลไปที่ server
+-->
+
+<table border="1">
+    <tr>
+        <td>111</td>
+        <td>222</td>
+    </tr>
+    <tr>
+        <td>aaa</td>
+        <td>bbb</td>
+    </tr>
+</table>
+
+<!--
+    table ทำตาราง ใส่ attribute border ได้
+    tr แถวแนวนอน
+        td แถวแนวตั้ง อยู่ใน tr อีกที
+--> 
+
+<div class="post">
+    <div class="post-title">Post : Coding is good !</div>
+    <div class="=post-content">
+        This is a content This is a content
+        This is a content This is a content
+        This is a content This is a content
+        This is a content This is a content
+        This is a content This is a content
+    </div>
+</div>
+
+<!--
+    class attribute ใช้ระบุความแตกต่างของ TAG ที่เหมือนกัน
+-->
+
+<div id="promotion-section">ส่วนของ Promotion บนหน้าเว็บ</div>
+
+<!--
+    เหมือน attribute class แต่ อย่าใช้บ่อย ทำให้เกิดบัคได้ง่าย
+    id สามารถใช้ในการ ใส่ attribute href="#ชื่อของclass" ใน TAG อื่นแล้วเมื่อมีการ click จะ jump ไปที่ TAG id ที่ระบุทันที
+    สามารถใช้กับ label input ใส่ for
+-->
+
+<!--
+    การตั้งชื่อ class ควรเป็นความหมายที่แท้จริงของสิ่งนั้น ไม่ควรตั้งอะไรก็ได้หรือตั้งตัวย่อหรือศัพท์ยากๆ
+    ให้ง่ายในการสื่อสารที่สุด
+-->
+
+<!--
+    screen reader สำหรับคนตาบอด จะอ่าน tag ของข้อความด้วย ไม่ควรใช้ tag กลับกัน
+    Accessibility ในการทำ web app ควรคำนึงถึงคนพิการในด้านต่างๆ
+-->
+
+<!--
+    พิมพ์ ! หรือ ht แล้วเลือก Emmet 'html5' แล้วจะได้ ตัวโครง html5 มาเลย
+-->
+
+<!DOCTYPE html5> <!-- บอกเวอชั่นของ html -->
+<html lang="en"> <!-- บอกภาษาของหน้า html เฉยๆ ส่วนใหญ่ไม่มีผลอะไร -->
+<head> <!-- ส่วนหัวของ html ไม่แสดงในหน้าเว็บ ใส่ meta tag / กลไลการทำงานของ html เบื้องหลัง-->
+    <meta charset="UTF-8"> <!-- บอกภาษาที่ใช้ของหน้า html นี้ บอกกับคอมพิวเตอร์ว่าเป็น code แบบไหน เพื่อแสดงผลอย่างถูกต้อง -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ทำให้หน้า html กับหน้าจอ fix กันพอดี -->
+    <title>Document</title> <!-- ชื่อ title bar ของ web browser -->
+</head>
+<body>
+    <!-- ส่วนแสดงผลของ html ที่จะแสดงในหน้าเว็บ -->
+</body>
+</html>
+
+<!--
+    tag meta = metadata เป็นการบอกว่าเว็บเรามีข้อมูลเกียวกับอะไร
+    SEO (Search Engine Optimization) ทำให้พวก bot ของ SE เข้ามาเก็บข้อมูลในหน้าเว็บที่ public มีโอกาสทำให้เว็บนั้นๆไปแสดงผลในการค้นหาของ SE ทั้งหลาย
+-->
+
+<!--
+    HTML5
+    semantics ใหม่ๆเพิ่มเข้ามาใน html 5
+-->
+
+<!--
+    
+-->
+
+<!--
+    
+-->
+
+<!--
+    
+-->
+
+<!--
+    
+-->
+
+<!--
+    
+-->
+
+<!--
+    
+-->
+
+<!--
+    
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

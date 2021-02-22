@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Flex Lab 01</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box;}
+    .container {
+
+      display: flex;
+
+      align-items: flex-start;
+      /* align-items: center; */
+
+      /* justify-content: space-between; */
+      /* justify-content: space-around; */
+      /* justify-content: center; */
+      justify-content: space-evenly;
+
+      /* align-content: flex-start; */
+      align-content: center;
+
+      /* flex-direction: row-reverse; */
+      /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
+
+      /* flex-wrap: wrap; */
+
+      /* flex-flow: column; */
+      /* flex-flow: row; */
+      flex-flow: row wrap;
+      /* flex-flow: row no-wrap; */
+
+      width: 80vw;
+      height: 80vh;
+      /* width: 50vw;
+      height: 50vh; */
+      
+      background-color: deeppink;
+      margin: 10vh auto;
+    }
+    .container > * {
+      background-color: lime;
+      margin: 5px;
+      /* padding: 20px; */
+
+      /* flex-shrink: 1; */
+
+      /* height: 20px; */
+
+      /* width: 20px; */
+
+      /* font-size: 30px; */
+
+      /* line-height: 50px; */
+    }
+
+  </style>
+  
+</head>
+<body>
+    <div class="container">
+      <div class="item1">01</div>
+      <div class="item2">02</div>
+      <div class="item3">03</div>
+      <div class="item4">04</div>
+      <div class="item5">05</div>
+      <div class="item6">06</div>
+      <div class="item7">07</div>
+      <div class="item8">08</div>
+      <div class="item9">09</div>
+      <div class="item10">10</div>
+    </div>
+    
+
+</body>
+</html>
