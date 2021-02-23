@@ -20,6 +20,7 @@ for ( i=1 ; i<=n ; i++ ) {
         a = a + 1
     }
 }
+
 if ( a > 2 ) {
     console.log(false)
 } else {
