@@ -812,8 +812,30 @@ if (numberSplit[1] == undefined) {
 
 console.log(numberSum);
 
-returnDigit = numberSum + number;
-console.log(returnDigit)
+// returnDigit = numberSum + number;
+numberSum2 = (numberSum*2);
+
+console.log(numberSum2)
+
+numberSum2_1 = numberSum2 - 1
+numberSum2_0 = numberSum2 - numberSum2_1
+
+numResult =  String(numberSum2_0) + numberSum2_1
+
+console.log(numResult)
+
+// numberSum2String = new String(numberSum2)
+// numberSum2Split = numberSum2String.split('');
+
+// console.log(numberSum2Split)
+
+// console.log(numberSum2_1)
+// console.log(numberSum2_0)
+
+// console.log(numberSum2_1_arr)
+// console.log(numberSum2_0_arr)
+
+// console.log(returnDigit)
 
 
 
