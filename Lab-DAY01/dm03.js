@@ -173,6 +173,30 @@ console.log(changeStringtoThaiDate('12-11-1996'));
 // console.log(changeStringtoThaiDate('12 13 1996'))
 // console.log(changeStringtoThaiDate('2-2-1995'))
 
+// //เฉลย
+// let months = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"]
+
+// function changeStringToThaiDate(date) {
+//     let dateArr = date.split("-"),
+//         [d, m, y] = dateArr;
+
+//     let maxDate = checkMax(m)
+//     return (Number(d) > maxDate || months[m - 1] === undefined) ? "error" : `${d} ${months[m - 1]} ${Number(y) + 543}`
+// }
+
+// function checkMax(month) {
+//     let maxDay = (/คม$/.test(months[month - 1])) ? 31 : (/ยน$/.test(months[month - 1])) ? 30 : 28
+//     return maxDay
+// }
+
+// console.log(changeStringToThaiDate("29-4-2020"))
+// console.log(changeStringToThaiDate("31-11-2000"))
+// console.log(changeStringToThaiDate("12-13-1996"))
+
+
+
+
+
 
 
 
@@ -234,36 +258,28 @@ function findAnswer(a, b) {
     }
     console.log(b_c);
     
-    intersectNumber = a_c.filter(x => b_c.includes(x));
+    intersectNumber = a_c.filter(item => b_c.includes(item));
 
     console.log(intersectNumber);
 
-    for (i = 0 ; i < intersectNumber.length ; i++) {
-        while ( a%intersectNumber[i] == 0 && b%intersectNumber[i] == 0 ) {
-            a = a / intersectNumber[i];
-            b = b / intersectNumber[i];
-            break;
-        }
-    }
+    a = a / intersectNumber[intersectNumber.length-1]
+    b = b / intersectNumber[intersectNumber.length-1]
 
-    if ( a%b == 0 && b%b == 0 ) {
-        a1 = a / b;
-        b1 = b / b;
-    }
+    // for (i = 0 ; i < intersectNumber.length ; i++) {
+    //     if ( a%intersectNumber[i] == 0 && b%intersectNumber[i] == 0 ) {
+    //         a = a / intersectNumber[i];
+    //         b = b / intersectNumber[i];
+    //     }
+    // }
 
-    if ( a%a == 0 && b%a == 0 ) {
-        a1 = a / a;
-        b1 = b / a;
-    }
-    
-    console.log(a1)
-    console.log(b1)
+    // for (i = 0 ; i < intersectNumber.length ; i++) {
+    //     if ( a%intersectNumber[i] == 0 && b%intersectNumber[i] == 0 ) {
+    //         a = a / intersectNumber[i];
+    //         b = b / intersectNumber[i];
+    //     }
+    // }
 
-    if (intersectNumber.length == 1) {
-        return a + '/' + b;
-    } else {
-        return a1 + '/' + b1;
-    }
+    return a + '/' + b
     
 }
 
@@ -271,13 +287,16 @@ function findAnswer(a, b) {
 // 1 2 7 14
 // 1 7
 
-// console.log(findAnswer(5, 7));
-// console.log(findAnswer(10, 5));
-// console.log(findAnswer(20, 100));
-// console.log(findAnswer(100, 100));
-// console.log(findAnswer(18, 4));
-// console.log(findAnswer(35, 49));
+console.log(findAnswer(5, 7));
+console.log(findAnswer(10, 5));
+console.log(findAnswer(20, 100));
+console.log(findAnswer(100, 100));
+console.log(findAnswer(18, 4));
+console.log(findAnswer(35, 49));
 
+console.log(findAnswer(50, 30));
+console.log(findAnswer(10, 100));
+console.log(findAnswer(20, 30));
 
 
 

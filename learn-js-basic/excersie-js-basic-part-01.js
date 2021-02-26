@@ -149,7 +149,19 @@ console.log(2*i)
 draw(3) // 2 4 6
 
 
+//exercise10
+function draw(n) {
 
+for (j=1;j<=n;j++) {
+    let a = ''
+    for (i=j;i<=j*n;i=i+j) {
+        a = a + i
+        }
+        console.log(a)
+    }
+}
+
+draw(3) // 
 
 
 //exercise18
@@ -171,31 +183,472 @@ function draw18(n) {
 
 draw18(3)
 
-example01
-
-n = 4
-for (i=1;i<=n;i++) {
-let a = ''
-    for (j=0;j<i;j++) {
-     a = a + j
-        } 
-     console.log(a + '\n')
-}
-
-
 */
 
+// //exercise11
+// function draw(n) {
 
-//exercise10
+// for (j=1;j<=n;j++) {
+//     let a = ''
+//     for (i=1;i<=n;i=i+1) {
+//         if (+i == +j) {
+//             b = '_'
+//             } else {
+//             b = '*'
+//             }
+//         a = a + b
+//         }
+//     console.log(a);   
+//     }
+// }
+
+// draw(3)
+
+
+// //exercise12
+// function draw(n) {
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( +i + +j == n+1 ) {
+//                 b = '_'
+//             } else {
+//                 b = '*'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise13
+// function draw(n) {
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( +i - +j >= 1 ) {
+//                 b = '_'
+//             } else {
+//                 b = '*'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise14
+// function draw(n) {
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( +i + +j >= +n+2 ) {
+//                 b = '_'
+//             } 
+//             else {
+//                 b = '*'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise15
+// function draw(n) {
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( +i - +j >= 1 ) {
+//                 b = '_'
+//             } else {
+//                 b = '*'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+
+//     for (j=2 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( +i + +j >= +n+2 ) {
+//                 b = '_'
+//             } 
+//             else {
+//                 b = '*'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+// draw(4)
+
+
+// //exercise15 - 2 
+// function draw(n) {
+//     c = 0
+//     d = n+n
+//     for (j=1 ; j<=n+n-1 ; j++) {
+//         let a = ''
+//         if ( c < d ) {
+//             c = c + 2
+//         }
+//         for (i=1 ; i<=n ; i++) {
+//             if ( i+j <= c ) {
+//                 b = '*'
+//             } else {
+//                 b = '_'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+
+// draw(4)
+
+
+// //exercise16
+// function draw(n) {
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( +i - +j >= 1 ) {
+//                 b = '_'
+//             } else {
+//                 b = j
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+//     for (j=2 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( +i + +j >= +n+2 ) {
+//                 b = '_'
+//             } 
+//             else {
+//                 b = j
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(3)
+
+
+//exercise16 - 2 
 function draw(n) {
-
-for (j=1;j<=n;j++) {
-    let a = ''
-    for (i=j;i<=j*n;i=i+j) {
-        a = a + i
+    c = 0
+    d = n+n
+    for (j=1 ; j<=n+n-1 ; j++) {
+        let a = ''
+        if ( c < d ) {
+            c = c + 2
+        }
+        for (i=1 ; i<=n ; i++) {
+            if ( i+j <= c ) {
+                if (j < n) {
+                    b = j
+                } else {
+                b = n
+                }
+            } else {
+                b = '_'
+            }
+                a = a + b
         }
         console.log(a)
     }
 }
 
-draw(3) // 
+
+draw(4)
+
+
+// //exercise17
+// function draw(n) {
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( i+j <= n ) {
+//                 b = '_'
+//             } else {
+//                 b = '*'
+//             }
+//         // for (i=n ; i>=1 ; i--) {
+//         //     if ( j - i < 0 ) {
+//         //         b = '_'
+//         //     } else {
+//         //         b = '*'
+//         //     }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise18
+// function draw(n) {
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( i-j < 0 ) {
+//                 b = '_'
+//             } else {
+//                 b = '*'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise19
+// function draw(n) {
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( i+j <= n ) {
+//                 b = '_'
+//             } else {
+//                 b = '*'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+//     for (j=2 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( i-j < 0 ) {
+//                 b = '_'
+//             } else {
+//                 b = '*'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise19 -2
+// function draw(n) {
+//     c = n
+//     d = n*-1
+//     for (j=1 ; j<=n+n-1 ; j++) {
+//         let a = ''
+//         if ( c > d ) {
+//             c = c - 2
+//         }
+//         for (i=1 ; i<=n ; i++) {
+//             if ( i-j <= c ) {
+//                 b = '_'
+//             } else {
+//                 b = '*'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise20
+// function draw(n) {
+//     let c = 0
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+        
+//         for (i=1 ; i<=n ; i++) {
+//             if ( i+j <= n ) {
+//                 b = '_'
+//             } else {
+//                 c = c + 1
+//                 b = c
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+//     for (j=2 ; j<=n ; j++) {
+//         let a = ''
+//         for (i=1 ; i<=n ; i++) {
+//             if ( i-j < 0 ) {
+//                 b = '_'
+//             } else {
+//                 c = c + 1
+//                 b = c
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise21
+// function draw(n) {
+//     let c = n
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         c = c-2
+//         for (i=1 ; i<=n+n-1 ; i++) {
+//             z = i-j
+//             if ( z < n && z > c ) {
+//                 b = '*'
+//             } else {
+//                 b = '_'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise22
+// function draw(n) {
+//     let c = n+n
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         c = c-2
+//         for (i=1 ; i<=n+n-1 ; i++) {
+//             z = i-j
+//             if ( z <= c && z >= 0) {
+//                 b = '*'
+//             } else {
+//                 b = '_'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise23
+// function draw(n) {
+//     let c = n
+//     for (j=1 ; j<n ; j++) {
+//         let a = ''
+//         c = c-2
+//         for (i=1 ; i<=n+n-1 ; i++) {
+//             z = i-j
+//             if ( z < n && z > c ) {
+//                 b = '*'
+//             } else {
+//                 b = '_'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+
+//     let d = n+n
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         d = d-2
+//         for (i=1 ; i<=n+n-1 ; i++) {
+//             z = i-j
+//             if ( z <= d && z >= 0) {
+//                 b = '*'
+//             } else {
+//                 b = '_'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+// //exercise24
+// function draw(n) {
+//     let c = n
+//     e = 0
+//     for (j=1 ; j<n ; j++) {
+//         let a = ''
+//         c = c-2
+        
+//         for (i=1 ; i<=n+n-1 ; i++) {
+//             z = i-j
+//             if ( z < n && z > c ) {
+//                 e = e + 1
+//                 b = e
+//             } else {
+//                 b = '_'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+    
+//     let d = n+n
+//     for (j=1 ; j<=n ; j++) {
+//         let a = ''
+//         d = d-2
+//         for (i=1 ; i<=n+n-1 ; i++) {
+//             z = i-j
+//             if ( z <= d && z >= 0) {
+//                 e = e + 1
+//                 b = e
+//             } else {
+//                 b = '_'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
+
+// draw(4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

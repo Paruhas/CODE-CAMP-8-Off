@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Basic-React.js"></script>
+</head>
+<body>
+    <!-- <h1>Hello React !</h1> -->
+    <div id='root'>
+        
+    </div>
+
+
+    <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+
+    <script>
+        // // TEST extranal JS
+        // function add(a, b) {
+        //     return a + b
+        // }
+        
+        // let result = add(10,20)
+        // console.log(result)
+        
+        // // การสร้าง element แบบปกติใน DOM
+        // const rootElement = document.getElementById('root');
+        // const element = document.createElement('h1');
+        // element.textContent = 'Hello, React !';
+        // element.className = 'hello-DOM-text';
+        // rootElement.append(element)
+
+        // การสร้าง element แบบ React
+
+        // // สร้างแค่ลูกตัวเดียว
+        // const rootElement = document.getElementById('root')
+        // const element = React.createElement(
+        //     'h1',
+        //     { className: 'hello-react-text'} ,
+        //     'Hello, React !'
+        // );
+
+        // ReactDOM.render(element, rootElement);
+        
+        // // สร้างแม่และลูก
+        // const rootElement = document.getElementById('root')
+        // const heading = React.createElement(
+        //     'h1',
+        //     { className: 'hello-react-text'} ,
+        //     'Hello, React !'
+        // );
+
+        // const element = React.createElement(
+        //     'div',
+        //     { className: 'container' },
+        //     heading
+        // );
+
+        // ReactDOM.render(element, rootElement);
+
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+    <script type='text/babel'>
+
+    // // การใช้งาน JSX type='text/bable'
+    // const rootElement = document.getElementById('root');
+
+    // const element = (
+    //     <div className='container'>
+    //         <h1 className='hello-react-text'>Hello, React !</h1>
+    //         <h2>Hello h2</h2>
+    //     </div>
+    // );
+
+
+    // // ความสามารถของ Javasciprt ประยุกต์ใช้ใน JSX type='text/bable'
+    // const rootElement = document.getElementById('root');
+
+    // let name = 'AAA';
+    // let name2 = 'BBB';
+
+    // let newContainerClassName = 'containter';
+    // // let newContainerClassName += ' hidden';
+
+    // let props = {
+    //     className: 'hello-react-text',
+    //     onClick: () => {
+    //         console.log('Clicked')
+    //     }
+    // }
+
+    // const element = (
+    //     <div className={newContainerClassName}>
+    //         <h1 className='hello-react-text'>Hello, React !</h1>
+    //         <h2 {...props}>Hello Prop {name}</h2>
+    //         <h2>Hello {name}</h2>
+    //         <h2>Hello {name2}</h2>
+    //     </div>
+    // );
+
+    // ReactDOM.render(element, rootElement);    
+    
+
+
+    // ลดความซ้ำซ้อนในการเขียนข้อมูล => สร้าง Function Component ในการสร้างข้อมูลออกมา
+    const rootElement = document.getElementById('root');
+    
+    function GreetingMsg(props) {
+        // props.age = props.age + 10; ทำแบบนี้ไม่ได้
+        return (<h1 className='hello-react-text'>
+            Hello, {props.name} !, <br />
+            Age : {props.age}
+            </h1>
+        );
+    }
+
+    const element = (
+        <div className='container'>
+            // สร้างด้วย Function Compenent แบบปกติ
+            {GreetingMsg({ name: 'React', age: 30})}
+            {GreetingMsg({ name: 'World', age: 25})}
+            {GreetingMsg({ name: 'John', age: 60})}
+            
+            // สร้างด้วย Function Compenent แบบJSX (HTML)
+            <GreetingMsg name='React' age={30} />
+            <GreetingMsg name='World' age={25} />
+            <GreetingMsg name='John' age={60} />
+
+            // สร้างด้วยวิธีปกติ
+            <h1 className='hello-react-text'>Hello, React !</h1>
+            <h1 className='hello-react-text'>Hello, World !</h1>
+            <h1 className='hello-react-text'>Hello, John !</h1>
+        </div>
+    );
+
+
+    ReactDOM.render(element, rootElement);    
+
+    </script>
+
+</body>
+</html>

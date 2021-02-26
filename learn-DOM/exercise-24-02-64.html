@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <style>
+        .hidden_t1 {
+            font-size: 0px;
+        }
+
+        .hidden_btn2 {
+            border-radius: 0px;
+            border: 0px;
+            font-size: 0px;
+            background-color: rgb(255, 255, 255, 0);
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            margin: -10px;
+        }
+
+        .hidden_t3 {
+            font-size: 0px;
+        }
+
+
+    </style> -->
+
+</head>
+<body>
+    <!-- <form action=""> -->
+        <!-- <button id='btn1' onclick="toggleFuncText()">Click to hide the text1</button>
+        <p id='t1'>Text1</p> <hr> -->
+
+        <!-- <button id='btn2' onclick="toggleFuncBtn()">Click to hide me2</button> <br> <br> <hr> -->
+        
+        <!-- <button id='btn3' onclick="toggleFuncText()">Hide</button>
+        <p id='t3'>Text3</p> <hr> -->
+    <!-- </form> -->
+
+    <!-- #4 -->
+    <!-- Province:
+    <select name="province" id="province" class="province">
+        <option value="Bangkok">Bangkok</option>
+        <option value="Nonthaburi">Nonthaburi</option>
+    </select>
+    District
+    <select name="district" id="district" class="district">
+        <option value="Ratchathewi">Ratchathewi</option>
+        <option value="Patumwan">Patumwan</option>
+    </select> -->
+
+    <!-- #5 -->
+    <button onclick="clickButton(this)" value="add">+</button>
+    <button onclick="clickButton(this)" value="subtract">-</button>
+    <button onclick="clickButton(this)" value="reset">Reset</button>
+    <h1 class="count">0</h1>
+
+
+    <script>
+        // btn1 = document.getElementById('btn1')
+        // btn1.addEventListener('click' , (e) => {
+        //     e.preventDefault()
+        // })
+        // function toggleFuncText() {
+        //     t1 = document.getElementById("t1");
+        //     t1.classList.toggle('hidden_t1')
+        // }
+        
+        // btn2 = document.getElementById('btn2')
+        // btn2.addEventListener('click' , (e) => {
+        //     e.preventDefault()
+        // })
+        // function toggleFuncBtn() {
+        //     btn2 = document.getElementById("btn2");
+        //     btn2.classList.toggle('hidden_btn2')
+        // }
+
+        // btn3 = document.getElementById('btn3')
+        // btn3.addEventListener('click' , (e) => {
+        //     e.preventDefault()
+        //     // this.innerHTML = this.innerHTML === 'Show' ? 'Hide' : 'Show'
+        // })
+        // function toggleFuncText() {
+        //     t3 = document.getElementById("t3");
+        //     t3.classList.toggle('hidden_t3')
+        //     btn3 = document.getElementById('btn3');
+        //     if (btn3.innerHTML == 'Hide') {
+        //         btn3.innerHTML = 'Show'
+        //     } else {
+        //         btn3.innerHTML = 'Hide' 
+        //     }
+        // }
+        
+        // // #4
+        // mapProvinceDistrict = {
+        //     Bangkok: [
+        //         {
+        //             value: 'Ratchathewi',
+        //             name: 'Ratchathewi'
+        //         },
+        //         {
+        //             value: 'Patumwan',
+        //             name: 'Patumwan'
+        //         }
+        //     ],
+        //     Nonthaburi: [
+        //         {
+        //             value: 'Muang',
+        //             name: 'Muang'
+        //         },
+        //         {
+        //             value: 'Pakgret',
+        //             name: 'Pakgret'
+        //         }
+        //     ]
+        // }
+        
+        // province = document.querySelector('.province');
+        // province.addEventListener('change', function(e) {
+        //     console.log(e.target.value)
+        //     district = document.querySelector('.district');
+        //     innerHTML = mapProvinceDistrict[e.target.value]
+        //         .map(item => `<option value=${item.value}>${item.name}</option>`).join('');
+        //     innerHTML = innerHTML;
+        // })
+
+        // // #5
+        count = 0;
+        countObj = document.querySelector('.count');
+        countObj.innerHTML = count;
+
+        function clickButton(e) {
+            console.log(e.value)
+            console.log(countObj)
+            
+            mode = e.value;
+            if (mode == 'add') {
+                count++;
+            } else if (mode == 'reset') {
+                count = 0;
+            } else {
+                if (count > 0) {
+                    count--;
+                }
+            } 
+            countObj.innerHTML = count; 
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>

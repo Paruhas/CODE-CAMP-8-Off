@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style='margin: 15px'>
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="logo" id="logo"></div>
+            <div class="menu"></div>
+        </div>
+        <div class="sidebar">First</div>
+        <input type="text" name="text" id="">
+        <div class="content">
+            <p>Hello</p>
+            <div>GOOGLE
+                <strong>is</strong>
+                a company.
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <!-- Student -->
+
+    
+    <!-- EX01 2.14 03 -->
+    <!-- <div>
+        <h2 class="title-1">List of companies</h2>
+        <ul>
+          <li id=1>Google</li>
+          <li class="active" id=2>Yahoo</li>
+          <li id=3>Tencent</li>
+        </ul>
+      </div> -->
+    
+
+
+    <script>
+        // document.body.style.background = 'lightgreen';
+        // setTimeout(() => document.body.style.background = '',3000);
+
+        // for (let i = 0; i < document.body.childNodes.length; i++) {
+        //     console.log( document.body.childNodes[i] ); // หาลูกทั้งหมดของ BODY (ทั้งแบบ text และ element)
+        // }
+        
+        // console.log(document.body.firstChild) // = #text
+        // console.log(document.body.firstChild.nextSibling) // .wrapper
+        // console.log(document.body.firstChild.nextSibling.nextSibling.nextSibling) // comment Student
+
+        // console.log(document.body.firstChild.nextSibling.firstChild.nextSibling) // .navbar
+        
+        // for (let elem of document.body.children) {
+        //     console.log(elem); // .wrapper, SCRIPT
+        // }
+        // console.log(document.body.firstElementChild); // .wrapper
+        // console.log(document.body.firstElementChild.firstElementChild.nextElementSibling); // .sidebar
+        
+        // const logo = document.getElementById('logo') // select OBJ ที่ id = logo ; ไม่ใส่แบบนี้ก็ได้ ทำแบบข้างล่างเอา
+        // // เพราะ id logo โดนมองเป็น Global ไปเลย => เพราะฉะนั้นยังไงก็ควรสั่งแบบข้างบนก่อนเสมอ (ไม่ควรสั่งแบบ กำหนดัวแปร = id เฉยๆด้วย)
+        // logo.innerHTML = 'Logo ID' // ใส่ TEXT ให้
+        // logo.style.background = 'lightblue'
+        // console.log(logo)
+
+        // const sidebarObj = document.querySelectorAll('.sidebar'); // ได้ทุก OBJ Node ที่มี class = "sidebar"
+        // console.log(sidebarObj)
+        
+        // const contentObj = document.querySelectorAll('.content p'); // ได้ทุก OBJ Node ที่มี class = "content" และเป็น TAG p
+        // console.log(contentObj)
+
+        // const sidebarObjF = document.querySelector('.sidebar'); // ได้ทุก OBJ Node ที่มี class = "sidebar"
+        // console.log(sidebarObjF)
+        // setTimeout(() => {
+        //     sidebarObjF.innerHTML = 'Modifired'
+        // }, 3000)
+
+        // getTagName = document.getElementsByTagName('div')
+        // console.log(getTagName)
+        // getClassName = document.getElementsByClassName('content')
+        // console.log(getClassName)
+        // getName = document.getElementsByName('text') 
+        // console.log(getName)
+
+        // navbar = document.querySelector('.navbar')
+        // console.log(navbar)
+        // menu = navbar.querySelector('.menu')
+        // console.log(menu)
+        
+        // // EX01 2.14 03
+        // test1 = document.getElementById('1')
+        // console.log(test1)
+        // test2 = document.getElementsByTagName('li')[0]
+        // console.log(test2)
+        // test3 = document.getElementsByClassName('active')
+        // console.log(test3)
+        // console.log(document.getElementsByClassName('active')[0].previousElementSibling)
+
+    </script>
+
+</body>
+</html>

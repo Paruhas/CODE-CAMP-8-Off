@@ -1,0 +1,107 @@
+<!-- การสร้าง Element ด้วย DOM Node Properties -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert {
+            pad: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: green;
+            background-color: #dff0d8;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert">
+        <strong>Hi there!</strong> You've read an important message.
+    </div>
+    <!-- <p class="alert"> insert TAG</p> -->
+
+    <!-- // EX02 2.7 02 ใน index02.html -->
+    <!-- <ol id="abc">
+        <li>Hello</li>
+        <li>World</li>
+    </ol> -->
+
+    <!-- // EX04 Lab3 ใน index02.html -->
+    <!-- <form><button class='stop'>Submit</button></form> -->
+
+    <script>
+        // // อยากสร้าง p แบบใน body ด้วย DOM แล้วแทรกไปหลัง alert ตัวแรก
+        // pTag = document.createElement('p')
+        // pTag.innerHTML = 'insert TAG'
+        // pTag.className = 'alert'
+        // console.log(pTag)
+        // // append , prepend ; ตัวแทรกตำแหน่งเข้าไป
+        // // before , after
+        // // การจะแทรกเข้าไป ต้องหาตำแหน่ง 
+        // // before , after ใช้ตำแหน่ง จากตัวที่มีก่อน ; 1 ตัวที่สร้างมา แทรกได้ครั้งเดียว? เอาที่สั่งล่าสุด
+        // firstAlert = document.querySelector('.alert')
+        // firstAlert.after(pTag) // แทรกหลัง firstAlert
+        // firstAlert.before(pTag) // แทรกก่อน firstAlert
+        // // append , prepend ระบุตัวก่อนใหญ่ TAG นั้นก่อน แล้วแทรก ก่อน TAG ปิดตัวใหญ่ หรือ หลัง TAG เปิดตัวใหญ่
+        // body = document.body // ทำให้ body เป็นก้อน Node เพื่อใช้งาน prepend และ append ; หรือทำเป็นแม่
+        // body.append(pTag) // แทรกหลัง firstAlert => หน้า tagปิด /body => ลูกคนสุดท้าย
+        // body.prepend(pTag) // แทรกก่อน firstAlert => หลัง tagเปิด body => ลูกคนแรก
+        // .replaceWith วาง Node ทับลงไปเลย
+
+        // // การลบออก
+        // // หาตำแหน่งตัวที่จะเอาออกก่อน แล้วค่อย .remove() ออก
+        // firstAlert = document.querySelector('.alert')
+        // firstAlert.remove();
+        // document.body.innerHTML = ''; // ได้เหมือนกัน แต่ง่ายไป และเลือกเป้าหมายไม่ได้ แบบบนดีกว่า ระบุเป้าหมายง่าย
+
+        // // การแทรก แทรกตรงๆแบบนี้ไม่ได้ มันจะเป็นการแทรก String ; ต้องทำเป็น Element OBJ (Node) ก่อน
+        // pTag = document.createElement('p')
+        // pTag.innerHTML = 'insert TAG'
+        // pTag.className = 'alert'
+        // body = document.body
+        // body.prepend('<p class="alert"> insert TAG</p>')
+
+        // //ต้องใช้ elem.insertAdjacentHTML(where, html) โดย where มี parameter ตามด้านล่าง
+        // // beforebegin == ก่อนElem ; afterbegin == เข้าไปในจุดเริ่ม Elem ; beforeend == เข้าไปในจุดสุดท้าย Elem ; afterend == หลังElem ;
+        // pTag = document.createElement('p')
+        // pTag.innerHTML = 'insert TAG'
+        // pTag.className = 'alert'
+        // //
+        // firstAlert = document.querySelector('.alert',)
+        // //
+        // firstAlert.insertAdjacentHTML('afterend','<p class="alert"> afterend</p>')
+        // firstAlert.insertAdjacentHTML('beforebegin','<p class="alert"> beforebegin</p>')
+        // //
+        // firstAlert.insertAdjacentHTML('afterbegin','<p class="alert"> afterbegin</p>')
+        // firstAlert.insertAdjacentHTML('beforeend','<p class="alert"> beforeend</p>')
+
+        // // การโคลน Node
+        // // true เอาข้างนอกด้วย false เอาแค่ข้างใน
+        // firstAlert = document.querySelector('.alert',)
+        // clone = firstAlert.cloneNode(true)
+        // firstAlert.after(clone)
+
+        // // EX02 2.7 02 ใน index02.html
+        // function clear(n) {
+        //     n.innerHTML = '' // เหลือโครงไว้ ลบแค่ข้างใน
+        //     // n.remove() // ไม่เหลืออะไรเลย
+        // }
+        
+        // EX04 Lab3 ใน index02.html
+        // elem = document.querySelector('.stop')
+        // console.log(elem)
+        // elem.addEventListener('click' , (e) => {
+        //     e.preventDefault();
+        // } )
+        // เฉลย
+        // form = document.querySelector('from');
+        // form.addEventListener('Submit' , (e)=> {
+        //     e.preventDefault(); })
+
+    </script>
+    
+</body>
+</html>
