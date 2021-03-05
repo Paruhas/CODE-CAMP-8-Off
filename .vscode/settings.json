@@ -23,5 +23,6 @@
         "sit",
         "tenetur",
         "voluptatum"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }

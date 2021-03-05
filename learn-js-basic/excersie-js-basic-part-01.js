@@ -352,33 +352,33 @@ draw18(3)
 // draw(3)
 
 
-//exercise16 - 2 
-function draw(n) {
-    c = 0
-    d = n+n
-    for (j=1 ; j<=n+n-1 ; j++) {
-        let a = ''
-        if ( c < d ) {
-            c = c + 2
-        }
-        for (i=1 ; i<=n ; i++) {
-            if ( i+j <= c ) {
-                if (j < n) {
-                    b = j
-                } else {
-                b = n
-                }
-            } else {
-                b = '_'
-            }
-                a = a + b
-        }
-        console.log(a)
-    }
-}
+// //exercise16 - 2 
+// function draw(n) {
+//     c = 0
+//     d = n+n
+//     for (j=1 ; j<=n+n-1 ; j++) {
+//         let a = ''
+//         if ( c < d ) {
+//             c = c + 2
+//         }
+//         for (i=1 ; i<=n ; i++) {
+//             if ( i+j <= c ) {
+//                 if (j < n) {
+//                     b = j
+//                 } else {
+//                 b = n
+//                 }
+//             } else {
+//                 b = '_'
+//             }
+//                 a = a + b
+//         }
+//         console.log(a)
+//     }
+// }
 
 
-draw(4)
+// draw(4)
 
 
 // //exercise17
@@ -497,6 +497,8 @@ draw(4)
 //         }
 //         console.log(a)
 //     }
+
+//     console.log(c)
 //     for (j=2 ; j<=n ; j++) {
 //         let a = ''
 //         for (i=1 ; i<=n ; i++) {
