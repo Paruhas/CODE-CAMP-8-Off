@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script src="./exercise-Reduce-XX-1.js"></script>
+
+</head>
+<body>
+    exercise-Reduce-XX-1
+
+<script>
+
+
+students = [
+    'Palm',
+    'Micky',
+    'Boss',
+    'Palm',
+    'Sine',
+    'Beer',
+    'Boss',
+    'Snap',
+    'Micky',
+    'Palm',
+    'Sine'
+];
+
+newStudent = students.reduce( function(previousValue, item, index, arr) {
+    if  (!previousValue.includes(item)) {
+        previousValue.push(item);
+    }
+    return previousValue;
+    //return !previousValue.includes(item) ? previousValue.push(item) : previousValue; // ทำแบบนี้ ไม่ได้ (push = return length ของมัน (เป็นตัวเลข) )
+    //return !previousValue.includes(item) ? [...previousValue, item] : acc ; // เขียนแบบข้างบน return เป็นค่าได้
+}, []) 
+
+console.log(newStudent)
+
+
+//  round     previousAccmulator                currentValue      if(ไม่นับ!)        nextAccmulator
+//  1         []                                'Palm'            false            ['Palm']
+//  2         ['Palm']                          'Micky'           false            ['Palm','Micky']
+//  3         ['Palm',Mickey]                   'Boss'            false            ['Palm','Micky','Boss']                
+//  4         ['Palm','Micky','Boss']           'Palm'            true             ['Palm','Micky','Boss']                
+//  5         ['Palm','Micky','Boss']           'Sine'            false            ['Palm','Micky','Boss','Sine']
+//  6         ['Palm','Micky','Boss','Sine']    'Beer'            false            ['Palm','Micky','Boss','Sine','Beer']
+//...
+
+
+// ObjS = students.reduce( function(previousValue, item, index, arr) {
+//     ObjS = {};
+//     if (ObjS.hasOwnProperty(previousValue)) {
+//         ObjS = { previousValue : index }
+//         return ObjS;
+//     }
+//     //return !previousValue.includes(item) ? previousValue.push(item) : previousValue; // ทำแบบนี้ ไม่ได้ (push = return length ของมัน (เป็นตัวเลข) )
+//     //return !previousValue.includes(item) ? [...previousValue, item] : acc ; // เขียนแบบข้างบน return เป็นค่าได้
+// }, {}) 
+
+// console.log(ObjS)
+
+
+//Stackoverflow
+// ObjS = students.reduce( function(previousValue, item, index, arr) {
+//     if (typeof previousValue[item] !== 'undefined') { // เช็ค Object ไม่เจอค่า = undefined
+//         previousValue[item]++; 
+
+//         console.log(previousValue)
+//         console.log(previousValue[item])
+
+//         return previousValue
+//     } else {
+//         previousValue[item]=1; 
+
+//         console.log(previousValue)
+//         console.log(previousValue[item])
+
+//         return previousValue;
+//     }
+// }, {})
+
+// console.log(ObjS)
+
+
+//เฉลย
+// reduceCount = (acc, item) => {
+//     // if (key in object)
+//     if (item in acc) {
+//         acc[item] = acc[item] +1;
+//     } else {
+//         acc[item] = 1;
+//     }
+//     return acc;
+// }
+
+reduceCount = (acc, item) => {
+    if (acc[item]) { // acc[item] = undefined = false
+        // console.log(acc[item])
+        // console.log(typeof acc[item])
+        // console.log(typeof acc)
+
+        acc[item] = acc[item] + 1  ; // Object['Palm']++ item = 'Palm'
+
+        // console.log(acc[item])
+        // console.log(typeof acc[item])
+        // console.log(typeof acc)
+    } else {
+        // console.log(acc[item])
+        // console.log(typeof acc[item])
+        // console.log(typeof acc)
+
+        acc[item] = 1;
+
+    //     console.log(acc[item])
+    //     console.log(typeof acc[item])
+    //     console.log(typeof acc)
+    }
+    return acc;
+}
+
+// reduceCount = (acc, item) => {
+//     acc[item] ? acc[item] += 1 : acc[item] = 1; // เขียนแบบ ternary if
+//     return acc;
+// }
+
+count = students.reduce(reduceCount, {});
+
+console.log(count)
+
+
+// round   acc                             item                        nextAcc
+// 1       {}                              'Palm'                      {'Palm':1}
+// 2       {'Palm':1}                      'Micky'                     {'Palm':1, 'Micky':1}
+// 3       {'Palm':1, 'Micky':1}           'Boss'                      {'Palm':1, 'Micky':1, 'Boss':1}
+// 4       {'Palm':1, 'Micky':1}           'Palm'                      {'Palm':2, 'Micky':1, 'Boss':1}
+
+a = { 'aa':1  }
+console.log(a)
+
+// console.log(typeof a)
+// console.log(Object.keys(a))
+// console.log(Object.values(a))
+
+a['aa']++
+console.log(a) //2
+
+b = 'aa'
+a[b]++ // a['aa']
+console.log(a) //3
+
+
+for (i in a) { // for KEYS in OBJECT
+    a[i]++ //4
+    // console.log(a)
+    console.log(i);
+    console.log(a[i]); // VALUE
+}
+
+console.log(a)
+
+
+</script>
+
+</body>
+</html>

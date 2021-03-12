@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="./excersie-Object-4.18-5.js"></script>
+
+</head>
+<body>
+    <h1>excersie-Object-4.18-5</h1>
+
+
+<script>
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+  };
+  
+
+function multiplyNumeric(obj, times) {
+//     const result = {};
+
+//     for (let key in obj) {
+//         if (+obj[key]) {
+//             result[key] = obj[key] * times;
+//         } else {
+//             result[key] = obj[key];
+//         }   
+//     }
+//     return result;
+// }
+
+const result = { ...obj };
+for (let key in obj) {
+    if (+obj[key]) result[key] = obj[key] * times;
+}
+ return result;
+}
+
+console.log(multiplyNumeric(menu,2))
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./exercise-ADV-02-18.js"></script>
+</head>
+<body>
+    exercise-ADV-02-18
+
+    <script>
+//Array.from()
+//Set()
+//Convert key in MAP to ARRAY user .push to edit
+//sum value OBJECT
+//Object.entries().length
+//Date
+
+
+//// แบบฝึกหัด01
+
+// function unique(arr) {
+//     // setValue = Array.from(new Set(arr))
+//     // // setValueArr = Array.from(setValue)
+//     // return setValue
+
+// //เฉลย?
+//     resultSet = new Set();
+
+//     for (value of values) {
+//         resultSet.add(values);
+//     }
+
+//     resultArr = [];
+//     for (data of resultSet) {
+//         resultArr.push(data);
+//     }
+
+//     console.log(resultArr)
+
+//     return resultArr
+// }
+// let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O" ];
+
+//   alert( unique(values) ); // Hare, Krishna, :-O
+  
+// // แบบ Arrow
+// // unique = arr => Array.from(new Set(arr));
+
+//// แบบฝึกหัด03
+
+
+// let map = new Map();
+
+// map.set("name", "John");
+
+// let keys = map.keys();
+
+// // Error: keys.push is not a function
+// // keys.push("more");
+
+
+
+// // conArr = Array.from(keys);
+// // conArr.push('more')
+// // console.log(conArr)
+
+// let vals = map.values();
+// let ent = map.entries();
+
+// conArr = Array.from(keys);
+// conValsArr = Array.from(vals);
+// conEnt = Array.from(ent);
+// console.log(conEnt) // [['name','John']]
+
+// // result = [...conArr, ...conValsArr];
+// // result.push('more')
+// // console.log(result)
+
+// // conArr.push('more')
+// // console.log(conArr)
+
+
+//// แบบฝึกหัด 7.2 1.
+
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+//   };
+
+// let salaries0 = {};
+
+
+// function sumSalaries(n) {
+
+//     sumSalariesValue = 0;
+    
+//     if (n == undefined) {
+//         return false;
+//     } vals = Object.values(n)
+
+//     // (n == undefined) ? 0 : vals = Object.values(n);
+    
+//     test = vals.reduce(function(preV, item, index ,arr) {
+//         sumSalariesValue = preV + item
+//         return sumSalariesValue
+//     }, 0)
+
+//     return sumSalariesValue
+
+//     // for ([key,value] of ents) {
+//     //     sumSalariesValue = value + sumSalariesValue
+//     // }
+//     // return sumSalariesValue
+// }
+// console.log( sumSalaries(salaries) ); // 650
+// console.log( sumSalaries(salaries0) ); // 650
+// alert( sumSalaries(salaries) ); // 650
+  
+//เฉลย ข้อ 1
+// values = Object.values(salaries);
+
+// sum = 0
+
+// for ( i = 0 ; i < values.length ; i++) {
+//     sum = sum + values[i];
+// }
+
+// console.log(sum)
+
+// sum = values.reduce((acc,item) => {
+//     return acc + item
+// }, 0)
+
+// sum = values.reduce((acc,item) =>  acc + item, 0)
+
+
+//// แบบฝึกหัด 7.2 2.
+
+
+// console.log(sum)
+
+// let user = {
+//     name: 'John',
+//     age: 30
+//   };
+
+// function count(n) {
+//     (n == undefined) ? countRes = 0 : countRes = Object.entries(n).length;
+//     return countRes
+// }
+
+// // Object.entries(n).length
+
+// // console.log(Object.entries(user).length)
+
+// // alert( count(user) ); // 2
+
+
+//เขียนฟังชันรับวัน 2 วัน แล้วเทียบกัน
+
+// d1 = new Date(`2019-06-11T22:23:59.000Z`)
+// d2 = new Date(2019, 5, 11, 22, 23, 59)
+
+d1 = new Date(`2019-06-11T23:59:59.000Z`)
+d1 = new Date(2019, 5, 11, 00, 59, 59)
+// d2 = new Date(`2019-06-11T17:00:00.000Z`)
+d2 = new Date(2019, 5, 11, 23, 59, 59)
+
+isSameDay = (d1, d2) => {
+    // d1 = prompt('Please Enter Date1 (Enter in DD-MM-YYYY-HH-MM-SS Format)' , 'DD-MM-YYYY-HH-MM-SS');
+    // if (d1 == null) {
+    //     return
+    // }
+    // d2 = prompt('Please Enter Date2 (Enter in DD-MM-YYYY-HH-MM-SS Format)',d1);
+    // if (d2 == null) {
+    //     return
+    // }
+    // return true if d1 is same day with d2
+    // return false if not same day
+    // if () {
+    //     break
+    // }
+    date1 = new Date(d1);
+    date2 = new Date(d2);   
+
+    console.log(date1);
+    console.log(date2);
+
+    date1GT = date1.getTime();
+    date2GT = date2.getTime();
+
+    console.log(date1GT);
+    console.log(date2GT);
+
+    date1GTzO = date1GT - (date1.getTimezoneOffset() *60 *1000 );
+    date2GTzO = date2GT - (date2.getTimezoneOffset() *60 *1000 );
+
+    console.log
+    console.log(date1GTzO);
+    console.log(date2GTzO);
+
+    date1VS = Math.floor(date1GTzO /1000 /60 /60 /24);
+    date2VS = Math.floor(date2GTzO /1000 /60 /60 /24);
+    
+    console.log(date1VS);
+    console.log(date2VS);
+
+    // if ( date1GT.getFullYear() === date2GT.getFullYear() && date1GT.getMonth() === date2GT.getMonth() && date1GT.getDate() === date2GT.getDate() ) { 
+    //     return true;
+    // } else if ( date1GTzO.getFullYear() === date2GT.getFullYear() && date1GTzO.getMonth() === date2GT.getMonth() && date1GTzO.getDate() === date2GT.getDate() ) {
+    //     return true;
+    // } else if (date1GT.getFullYear() === date2GTzO.getFullYear() && date1GT.getMonth() === date2GTzO.getMonth() && date1GT.getDate() === date2GTzO.getDate() ) {
+    //     return true;
+    // } return false;
+
+    if ( date1VS === date2VS ) { 
+        return true;
+    } return false;
+
+}
+
+
+// d1 = new Date(2019, 5, 11, 5, 23, 59)
+
+console.log(d1)
+console.log(d2)
+
+
+
+
+// let date1 = new Date(2021,1,18,23,0,0)
+// let date2 = new Date(2021,1,18,0,25,2)
+
+// let isSameDay = (d1,d2) =>{
+// let dat1 = new Date(d1)
+// let dat2 = new Date(d2)
+// // let timeDiff = d1.getTime() -d2.getTime()
+// // let date = Math.floor(timeDiff /100/60/60/24)
+// // let timeLeft = timeDiff - day*24*60*60*1000
+// // let hour = Math.floor(timeLeft /1000/60/60)
+// // time
+// let hour1 = d1.getHours()
+// let hourUTC = d1.getUTCHours()
+// let hourDiff = hour1 - hourUTC
+// let day1Driff = Math.floor((d1.getTime() + hourDiff*60*60*1000)/1000/60/60/24)
+// let hour2 = d2.getHours()
+// let hour2UTC = d2.getUTCHours()
+// let hour2Diff = hour2-hour2UTC
+// let day2Driff = Math.floor((d2.getTime() + hour2Diff*60*60*1000)/1000/60/60/24)
+// if(dat1.getDate() === dat2.getDate() 
+// && dat1.getMonth() === dat2.getMonth()
+// && dat1.getFullYear() === dat2.getFullYear()
+// && day1Driff - day2Driff < 24){
+//     return true
+// } else {
+//     return false
+// }
+// }
+// alert(isSameDay(date1, date2))
+
+    </script>
+</body>
+
+</html>

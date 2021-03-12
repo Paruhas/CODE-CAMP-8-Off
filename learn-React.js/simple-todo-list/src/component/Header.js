@@ -1,15 +1,16 @@
-import { useState } from "react"
+import { useState , useEffect } from "react"
 
 function Header(props) {
-    console.log(props)
+    // console.log(props)
 
 
-    const [text, setText] = useState('')
+    // const [text, setText] = useState('')
     
   const handleSearchTextChange = (event) => {
-    // console.log(event)
+    console.log(event)
     // console.log(event.target.value)
-    setText(event.target.value);
+    props.setTextInput(event.target.value);
+    props.setSearchKey(event.target.value);
   };
 
 
@@ -24,8 +25,8 @@ function Header(props) {
 
                 <div className='h-right'>
                     <input type='text' placeholder='Search' 
-                    onChange={handleSearchTextChange} 
-                    value={text}
+                    onChange={handleSearchTextChange}
+                    value={props.textInput}
                     ></input>
                     <button className='searchButton' 
                     onClick={props.handleSubmitSearch}

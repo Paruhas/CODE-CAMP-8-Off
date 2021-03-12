@@ -24,7 +24,7 @@ function SinglePostPage() {
         }
 
         return getPostsById()
-    }, []); // อยากได้ค่าเป็น ARR
+    }, []); // อยากได้ค่าเป็น ARR => ทำครั้งเดียว
 
     return (
     <div>

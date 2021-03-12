@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>exercise-Method-Obj-6.6.4</h1>
+
+    <script>
+
+
+let ladder = {
+    step: 0,
+    up() {
+      ladder.step++;
+    //   return ladder
+        return this
+    },
+    down() {
+      this.step--;
+    //   return ladder
+        return this
+    },
+    showStep: function() { // shows the current step
+      console.log( this.step );
+    }
+  };
+
+// // ladder.up()
+// // ladder.down()
+// // ladder.showStep()
+// // ladder.up().up().down().showStep();
+
+    </script>
+</body>
+</html>

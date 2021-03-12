@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./exercise-Str-2.11.1.js"></script>
+
+</head>
+<body>
+    exercise-Str-2.11.1
+
+    <script>
+        function ucFirst() {
+    n = prompt('','aaa');
+    if ( !isNaN(n) ) {
+        b = 'Enter Text'
+        return b
+    } else {
+        a = (n[0].toUpperCase()) + (n.slice(1));
+        return a
+    }
+}
+
+// ucFirst()
+console.log(ucFirst())
+
+
+/*
+function ucFirst (str) {
+    if (typeof str !== 'string') return 'Require String';
+    if (!str) return str;
+    return str[0].toUpperCase() + str.slice(1);
+}
+console.log(ucFirst(aaa))
+console.log(ucFirst(123))
+*/
+    </script>
+</body>
+</html>

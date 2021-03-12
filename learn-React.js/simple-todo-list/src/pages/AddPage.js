@@ -4,12 +4,15 @@ import { useState } from 'react'
 import { useHistory } from "react-router-dom";
 import HomePage from './HomePage'
 
+import Header from '../component/Header'
 
 
-function AddPage() {
+function AddPage(props) {
+
+// console.log(props)
 
 let history = useHistory();
-console.log(history.location.state)
+// console.log(history.location.state)
 
 const handleAddPageBack = (event) => {
     event.preventDefault();
@@ -19,26 +22,22 @@ const handleAddPageBack = (event) => {
 const handleSubmitAdd = (event) => {
     event.preventDefault();
     console.log('ADD')
-    console.log(setListDoing)
+    console.log(props)
 }
+
+const handleGoToAdd = (event) => {
+    // event.preventDefault();
+    history.push('/add-page' , listToDo)
+    // let dateAdd = prompt('',new Date().getDate() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getFullYear() )
+    // setListToDo ( [...listToDo , { textTD: text ,dateTD: dateAdd } ] )
+  }
 
 
     return (
     <div className="App">
 
-        <header>
 
-            <div className='h-left'>
-                <p>To Do List App</p>
-            </div>
-
-            <div className='h-right'>
-                <input type='text' placeholder='Search' ></input>
-                <button className='searchButton' >Search</button>
-                <button className='AddButton' >Add</button>
-            </div>
-        
-        </header>
+    <Header handleGoToAdd={props.handleGoToAdd} setListToDo={props.setListToDo} listToDo={props.listToDo} handleSubmitSearch={props.handleSubmitSearch}/>
 
         <div className='form-add'>
         
