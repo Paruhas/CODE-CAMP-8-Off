@@ -1,0 +1,13 @@
+npx sequelize-cli init:config
+npx sequelize-cli init:models
+
+* change password *
+
+npx sequelize-cli db:create
+
+npm i cors ; connect back to front
+
+///
+
+npm i multer
+จัดการ middlewares multipart/form-data (เกี่ยวกับการอัพโหลดไฟล์)

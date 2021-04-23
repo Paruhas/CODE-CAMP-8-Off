@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header > * {
+  display: flex;
+  align-items: center; 
+  justify-content: space-around;
+}
+
+.navBar > p {
+  padding: 20px;
+}
+
+.inputFrom {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 30vw;
+}
+
+.inputFrom > * {
+  margin: 10px 0px;
+  padding: 10px ;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.inputFrom > button {
+ padding: 10px; 
+ width: max-content;
+}
+
+@media only screen and (max-width: 800px) {
+  * {
+    padding: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inputFrom {
+    width: 80vw;
+  }
+  .navBar > p {
+    padding: 0px;
+  }
+}
+
+.posts-left-box , .posts-right-box {
+  border:1px solid;
+  padding:10px 0px;
+  text-align:center;
+  margin:10px;
+}
+
+.right-content , .left-content {
+  background-color:lightpink;
+  flex-grow:1;
+  display: flex;
+  flex-direction:column;
+}
+
+.center-content {
+  background-color:wheat;
+  flex-grow:2;
+}
+
+.Homepage-content-header , .Homepage-content-header > * {
+  padding: 5px;
+}

@@ -1,0 +1,50 @@
+MVC
+- Model
+
+-> Post
+--> User Name {}
+--> userProfileImage str-url
+--> postTime types.DATEONLY str
+--> postText str
+--> PostImage(optional) str-url
+--> comment []
+
+-> comment 
+--> userProfileImage str-url
+--> User Name {}
+--> commentText {}
+
+-> User
+--> username str
+--> password str
+--> name str
+--> profileImage str-url
+--> email str
+--> PostUser []
+--> friendList []
+--> friendRequest [] , isAccept:Boolean
+
+----------------------------------
+
+- Method
+--> Login
+--> register
+--> createPost - Post static(text)
+--> getPost
+--> comment - Post (Post post, User user, Str commentText)
+--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
