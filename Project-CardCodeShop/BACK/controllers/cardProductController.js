@@ -3,6 +3,102 @@ const AppError = require("../utils/AppError")
 
 const isNumbers = /^\d*$/;
 
+exports.getAllCardProducts = async (req, res, next) => {
+  try {
+    const allCardProducts = await CardProduct.findAll(
+      {
+        include: [
+          {
+            model: CardCode,
+            where: {
+              // cardProductId: "1",
+              // codeStatus: "AVAILABLE"
+            }
+          }
+        ],
+        where: {
+          // isDeleted: "NOT"
+        },
+      });
+    res.status(200).json({ allCardProducts });
+  } catch(err) {
+    next(err);
+  }
+};
+
+exports.getAllCardProductsCount = async (req, res, next) => {
+  try {
+    const allCardProductsCount = await CardProduct.findAll(
+      {
+        include: [
+          {
+            model: CardCode,
+            where: {
+              // cardProductId: "1",
+              // codeStatus: "AVAILABLE"
+            },
+            attributes: [[sequelize.fn('COUNT', 'CardCode.codeStatus'), 'CardCodeAvailable']],
+            
+          },
+        ],
+        where: {
+          isDeleted: "NOT"
+        },
+        group: ['card_product_id']
+        
+      });
+    res.status(200).json({ allCardProductsCount });
+  } catch(err) {
+    next(err);
+  }
+};
+
+exports.getCardProductsPENDING = async (req, res, next) => {
+  try {
+    const PENDINGCardProducts = await CardProduct.findAll(
+      {
+        include: [
+          {
+            model: CardCode,
+            where: {
+              // cardProductId: "1",
+              codeStatus: "PENDING"
+            }
+          }
+        ],
+        where: {
+          // isDeleted: "NOT"
+        }
+      });
+    res.status(200).json({ PENDINGCardProducts });
+  } catch(err) {
+    next(err);
+  }
+};
+
+exports.getCardProductsSOLD = async (req, res, next) => {
+  try {
+    const SOLDCardProducts = await CardProduct.findAll(
+      {
+        include: [
+          {
+            model: CardCode,
+            where: {
+              // cardProductId: "1",
+              codeStatus: "SOLD"
+            }
+          }
+        ],
+        where: {
+          // isDeleted: "NOT"
+        }
+      });
+    res.status(200).json({ SOLDCardProducts });
+  } catch(err) {
+    next(err);
+  }
+};
+
 exports.getAllAvailableCardProducts = async (req, res, next) => {
   try {
     const availableCardProducts = await CardProduct.findAll(
@@ -33,8 +129,18 @@ exports.getAvailableCardProduct = async (req, res, next) => {
         where : {
           id: id,
           isDeleted: "NOT"
-        }
+        },
+        include: [
+          {
+            model: CardCode,
+            where: {
+              codeStatus: "AVAILABLE"
+            }
+          }
+        ],
       });
+      
+
 
     if (!availableCardProduct) return res.status(400).json({ message: "can't get this cardProduct"});
 
@@ -49,9 +155,9 @@ exports.createCardProduct = async (req, res, next) => {
   try {
     const { img , name, price } = req.body;
 
-    const { user } = req.user;
+    const { roleAdmin } = req.user;
 
-    if ( !user || user.roleAdmin !== "ADMIN" ) {
+    if ( !roleAdmin || roleAdmin !== "ADMIN" ) {
       throw new AppError(400, "access denied, you are not allow to access this page")
     }
     
@@ -90,9 +196,9 @@ exports.editStatusCardProduct = async (req, res, next) => {
     const { id } = req.params;
     const { isDeleted } = req.body;
 
-    const { user } = req.user;
+    const { roleAdmin } = req.user;
 
-    if ( !user || user.roleAdmin !== "ADMIN" ) {
+    if ( !roleAdmin || roleAdmin !== "ADMIN" ) {
       throw new AppError(400, "access denied, you are not allow to access this page")
     };
 

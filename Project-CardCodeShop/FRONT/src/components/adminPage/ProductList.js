@@ -4,6 +4,9 @@ import axios from "../../configs/axios";
 
 function ProductList() {
   const [productLists, setProductLists] = useState();
+  const [PENDINGProductLists, setPENDINGProductLists] = useState();
+  const [SOLDProductLists, setSOLDProductLists] = useState();
+
   
   useEffect( async () => {
     await getProducts();
@@ -11,13 +14,38 @@ function ProductList() {
 
   async function getProducts() {
     try {
-      const resProductList = await axios.get("card-products/in-use");
-      console.log(resProductList.data.availableCardProducts)
-      setProductLists(resProductList.data.availableCardProducts);
+      const resAllProductList = await axios.get("card-products/");
+      // console.log(resAllProductList.data.allCardProducts)  
+      setProductLists(resAllProductList.data.allCardProducts);
+
+      const resPENDINGProductLists = await axios.get("card-products/pending");
+      // console.log(resPENDINGProductLists.data.PENDINGCardProducts)    
+      setPENDINGProductLists(resPENDINGProductLists.data.PENDINGCardProducts);
+
+      const resSOLDProductLists = await axios.get("card-products/sold");
+      // console.log(resSOLDProductLists.data.SOLDCardProducts)  
+      setSOLDProductLists(resSOLDProductLists.data.SOLDCardProducts);
+
     } catch(err) {
       console.log(err);
     }
   };  
+  if(productLists){
+    const [data1, data2, data3, data4] = productLists
+
+    console.log(data1)
+  }
+  console.log(PENDINGProductLists)
+  console.log(SOLDProductLists)
+
+  // const a = PENDINGProductLists?.map((item, index) => {
+  //   console.log(item)
+  //   return item.id , item.CardCodes.length
+  // })
+
+  // if(a) {
+  //   console.log(a)
+  // }
 
   return (
     <div className="content-center-admin-firstBox">

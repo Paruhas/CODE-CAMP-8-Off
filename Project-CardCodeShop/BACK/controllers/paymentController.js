@@ -130,9 +130,9 @@ exports.approvePayment = async (req, res, next) => {
     const { paymentId } = req.body;
     // console.log(paymentId);
 
-    const { user } = req.user;
+    const { roleAdmin } = req.user;
 
-    if ( !user || user.roleAdmin !== "ADMIN" ) {
+    if ( !roleAdmin || roleAdmin !== "ADMIN" ) {
       throw new AppError(400, "access denied, you are not allow to access this page")
     }
   
@@ -203,9 +203,9 @@ exports.cancelPayment = async (req, res, next) => {
     const { paymentId } = req.body;
     // console.log(paymentId);
 
-    const { user } = req.user;
+    const { roleAdmin } = req.user;
 
-    if ( !user || user.roleAdmin !== "ADMIN" ) {
+    if ( !roleAdmin || roleAdmin !== "ADMIN" ) {
       throw new AppError(400, "access denied, you are not allow to access this page")
     }
   

@@ -72,9 +72,9 @@ exports.createCardCodeByProductId = async (req, res, next) => {
     const { codeNumbers } = req.body
     const { pid } = req.params;
 
-    const { user } = req.user;
+    const { roleAdmin } = req.user;
 
-    if ( !user || user.roleAdmin !== "ADMIN" ) {
+    if ( !roleAdmin || roleAdmin !== "ADMIN" ) {
       throw new AppError(400, "access denied, you are not allow to access this page")
     };
 

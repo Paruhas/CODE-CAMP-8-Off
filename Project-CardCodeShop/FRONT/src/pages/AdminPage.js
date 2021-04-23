@@ -9,6 +9,8 @@ import BankAccList from '../components/adminPage/BankAccList';
 import { getToken } from '../services/localStorageService';
 import jwt_decode from "jwt-decode";
 import { useHistory } from 'react-router';
+import Modal from 'react-modal';
+
 
 function AdminPage() {
   const [isAdmin, setIsAdmin] = useState(false)  
@@ -35,7 +37,7 @@ function AdminPage() {
 
   return (
     <div className="root">
-      <Header isAdmin={isAdmin} setIsAdmin={setIsAdmin} />
+      <Header isAdmin={isAdmin} setIsAdmin={setIsAdmin}/>
 
         {(isAdmin) &&
           <div className="content-outside">

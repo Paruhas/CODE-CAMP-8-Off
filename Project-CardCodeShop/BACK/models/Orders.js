@@ -8,9 +8,7 @@ module.exports = ( sequelize, DataTypes ) => {
         createdAt: {
             type: DataTypes.DATE,
             defaultValue: sequelize.literal('NOW()')
-        },
-        
-        
+        },        
       },{
           underscored: true,
           timestamps: false

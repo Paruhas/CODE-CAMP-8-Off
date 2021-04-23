@@ -16,28 +16,35 @@ function OrderHistoryBox() {
     try {
       const decodedUserData = await jwt_decode(getToken());
       const resOrderHistory = await axios.get("/orders/user/" + decodedUserData.id );
+      // console.log(resOrderHistory.data.allOrdersByUserId[0].createdAt)
       setOrderHistory(resOrderHistory.data.allOrdersByUserId);
     } catch(err) {
       console.log(err)
     }
   };  
 
-  console.log(orderHistory)
+  // console.log(orderHistory)
 
   return (
 <>
 {orderHistory?.map((item, index) => {
+  var dateString = ((new Date(item.createdAt)).getDate()) + "-" +
+  ((new Date(item.createdAt)).getMonth() + 1) + "-" +
+  ((new Date(item.createdAt)).getFullYear()) 
   return (
     <div className="content-center-profile-historyBox-orderDetail" key={item.id}>
 
     <div className="content-center-profile-historyBox-orderDetail-header">
-      <div><h3>Order Id: {item.id}</h3></div>
-      <div><h3>Order Date: 
-        {/* {(item.createdAt).substring(0, 10) 
-          + " " + (item.createdAt).substring(11, 16)
-        } */}
-        {(item.createdAt)}
-      </h3></div>
+      <div>
+        <h3>
+          Order Id: {item.id}
+        </h3>
+      </div>
+      <div>
+        <h3>
+          Order Date: {dateString}
+        </h3>
+      </div>
     </div>
 
     {item.OrderDetails.map((item1, index) => {

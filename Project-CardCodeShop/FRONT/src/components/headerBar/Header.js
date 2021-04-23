@@ -8,8 +8,8 @@ function Header(props) {
   return (
     <div className="navbar-outside">
       <div className="navbar-container">
-        <HomeButton isAdmin={props.isAdmin} />
-        <HeaderRight isAdmin={props.isAdmin} />
+        <HomeButton isAdmin={props.isAdmin} setIsAdmin={props.setIsAdmin}/>
+        <HeaderRight isAdmin={props.isAdmin} setIsAdmin={props.setIsAdmin}/>
       </div>
     </div>
   )
