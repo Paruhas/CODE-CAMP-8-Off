@@ -1,0 +1,62 @@
+MFEC
+Goingjesse
+
+SCB
+
+java
+python
+js
+angular
+express( ไม่ JS )
+framework ต่างๆ
+database - HTML
+
+academy upskill ภาษาต่างๆ sectionเรียน ส่งไปเรียน
+
+คัดเลือก Coding & logic ทดสอบ ก่อนสัมภาษงาน > ส่งแบบทดสอบ
+================================================
+
+AIS
+
+java
+dotnet
+angular
+M - object C
+swip
+Hybird -
+python
+ruby
+
+online training พนักงาน
+course enterpise ของเว็บไซต์
+class room จัด offline
+================================================
+
+QAI
+Sunday
+
+***SHIPPOP
+ecommerce ช่วยหลังบ้าน เชื่อมต่อกับขนส่ง
+พาทเนอการเงิน
+
+
+backend
+หลักการ login
+perfomance ของการเขียน (  for loop / recusive ) > handler req เยอะ performance ดี
+micorservice เจียนทุกอย่างแล้ว deploy แยกกัน เชื่อมกันด้วย API กันเซิฟเน่า
+การเตรียมข้อมูล format ข้อมูล ระบุเหมือนกัน การออกแบบ shcema
+
+frontend
+context redux reduce
+swelte ภาษาคล้ายๆ react framework ใช้ง่ายกว่า render แค่ส่วนที่จำเป็น === performance ดีกว่า complie เพียวJS ได้
+
+การสอนงาน ใช้ sharing section ทุก ศ เอาความรู้มาแชร์กัน
+
+ลองอ่าน code SHIPPOP 1 อาทิตย์ 
+consult ได้ สอนกันได้
+
+ML python and DATA > หลักการจัดการข้อมูล > สมการคณิตศาตร์
+garbage in > garbage out วงการML
+C === program จ้า ทำเป็น Libary เรียกใช้
+python fullter react-native
+

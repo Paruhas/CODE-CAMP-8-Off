@@ -1,0 +1,56 @@
+coraline ออย
+เน้นให้โจทไปทำ ติดอะไรถามได้ แต่ให้เราไปทำเองซะส่วนใหญ่ เน้นให้เราเรียนรู้ด้วยตัวเอง
+*มี datasci ด้วย
+
+*** tirck VS HR 
+ทำ website resume ด้วย github.io (ถ้าเอามี back ด้วย ก็ nipaClound / Heroku[ต้องเข้าไปปลุกทุกวันไม่งั้นจะ page not found] / Ruk-com[ซื้อต่อปี])
+ทำ project ง่ายๆลง github.io สัก 1-3 project (ถ้าไม่ได้ก็ YOUTUBE preview)
+ทำ profile github สวยๆ
+ทำสไล present ตนเอง และ project ที่เคยทำ
+
+Ark Insights Co., Ltd. Sukanda Ruttanapaphawin r.sukanda@ark-insights.com 0982724004
+ใกล้ ม.เกษตร
+เข้าใจคน ค่อยให้คนใหม่ทำงานไปเรื่อยๆ เป็น stepๆ
+
+Niceloop Co.,Ltd.
+WFH 100%
+ทำงานผ่านZoom ปรึกษา/ถามผ่านZoom (ช้ากว่า face to face)
+
+บริษัท โทมาโต้ ไอเดียส์ จำกัด ชัยยุทธ์ hr@ketshopweb.com 087701988
+บ.ดีมาก แต่คัดคนมาก 
+(ต้องอธิบาย code ทุกวัน แล้วคอย review code ให้ตลอด)
+
+CREATIVE ME CO., LTD. พราว natkulaporn.w@creativeme.co.th 092391034
+
+Nipa Technology	Jirarat	jirarat@gmail.com	0616292287
+มี 2 ส่วน clound กับ project
+
+G-Able pattamaporn.ko@g-able.com 084-6693832 ปัทมาภรณ์ คชมะเริ
+มี 2 ส่วน เน้นงานกับองค์กร + ภาครัฐ ไม่แนะนำ*งานลัดเยอะมาก
+
+Tellscore Co., Ltd. nuanpan@tellscore.com 085-163-6339 Nuanpan Achakornlak
+ชอบเล่นเกมก็แนะนำ เกี่ยวกับการสตรีมมิ่ง
+
+Donuts Bangkok อรสิริ เอี่ยมวัฒน์ hr@donuts-bkk.com 083066967
+เกี่ยวกับการสตรีมมิ่ง เขียน product ที่เกี่ยวกับเกม
+
+Synhub
+ง่านค่อนข้างชิว อยู่ที่ นวนคร (ลำลูกกา) เรียนฟรีตลอดชีพ อบรมฟรี (การศึกษาหนักไปทางIOTกับstartUp)
+
+Sin wattana
+https://www.sinwattana.com/th/hiring
+หลังบ้าน python mainหลัก===python ชอบสอน(พรอำนาจอยู่ สอนofflineเก่งมาก ใจเย็น สอนดี ทำไม่ได้ไม่ด่า ให้พักเลยบ)
+*สมัคร node.js ไปได้ แต่ก็บอกพร้อมเรียน python
+
+Vonder
+https://www.vonder.co.th/
+ถ้าชอบการศึกษา
+
+
+
+
+
+*C# เขียนเกม
+
+
+
